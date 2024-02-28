@@ -54,7 +54,6 @@
 			// moves the Box to a new position on the screen along the X-Axis
 			function moveBoxTo(newPositionX, newPositionY) {
 				box.css("left", newPositionX);
-				box.css("top", newPositionY)
 			}
 
 			// changes the text displayed on the Box
@@ -87,11 +86,11 @@
 				moveBoxTo(positionX, positionY);
 
 
-				if (positionX>boardWidth) {
+				if (positionX > boardWidth) {
      				// then do X, Y, and Z
 					speed = -speed; 
 					}
-				if(positionX<0) {
+				if(positionX < 0) {
 					speed = speed * -1;
 				}
 				
