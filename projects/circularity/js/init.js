@@ -32,10 +32,12 @@ var init = function (window) {
             circles.push(circle);
         }
         // TODO 3 / 7 : Call the drawCircle() function 
-        for (var loopsCompleted = 0; loopsCompleted < 100; loopsCompleted++) {
-            // do something
-            drawCircle();
-          }
+        var loopsCompleted = 0;
+        while (loopsCompleted < 100) {
+        // do something
+        drawCircle();
+        loopsCompleted++;
+        }
         
 
         ////////////////////////////////////////////////////////////
@@ -49,10 +51,10 @@ var init = function (window) {
         */
         function update() {
             
-            for (var i = 0; i < myArray.length; i++) {
+            for (var i = 0; i < circles.length; i++) {
                 // code to repeat using i
-                physikz.updatePosition( circles[i])
-                game.checkCirclePosition(circles[i])
+                physikz.updatePosition( circles[i]);
+                game.checkCirclePosition(circles[i]);
               }
             
 
@@ -75,14 +77,14 @@ var init = function (window) {
                 circle.x = 0;
             }
             if (circle.x < 0){
-                circle.x = 0;
+                circle.x = canvas.width;
             }
             
             if (circle.y > canvas.height) {
                 circle.y = 0;
             }
             if (circle.y < 0) {
-                circle.y = 0;
+                circle.y = canvas.height;
             }
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
