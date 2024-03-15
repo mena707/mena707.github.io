@@ -21,6 +21,7 @@ $(function () {
     createPlatform(-50, -50, 50, canvas.height + 500); //bottom
     createPlatform(canvas.width, -50, 50, canvas.height + 100);
 
+
     /**
      * Uncomment the loops below to add a "grid" to your platformer game's screen
      * The grid will place both horizontal and vertical platforms incremented 100 pixels apart
@@ -50,6 +51,7 @@ $(function () {
     createPlatform(500,380,100, 15);
     createPlatform(750,300,190, 15);
     createPlatform(1120,300,20, 15);
+    
     // TODO 2
     // Create collectables
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
@@ -66,6 +68,7 @@ $(function () {
     createCannon("top", 900, 1000);
     createCannon("right", 400, 1000);
     createCannon("left", 500, 1000);
+    createCannon("top", 470, 500)
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
     /////////////////////////////////////////////////
